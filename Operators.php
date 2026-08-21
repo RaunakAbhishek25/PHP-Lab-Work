@@ -1,22 +1,32 @@
 <?php
-$a = 20;
-$b = 10;
 
-echo "Addition = " . ($a + $b) . "<br>";
-echo "Subtraction = " . ($a - $b) . "<br>";
-echo "Multiplication = " . ($a * $b) . "<br>";
-echo "Division = " . ($a / $b) . "<br>";
-echo "Modulus = " . ($a % $b) . "<br><br>";
+//Write a PHP program for operators in PHP.
 
-echo "a == b : ";
-var_dump($a == $b);
-echo "<br>";
+$a = 15;
+$b = 4;
 
-echo "a > b : ";
-var_dump($a > $b);
-echo "<br><br>";
+echo "<h3>1. Arithmetic Operators</h3>";
+echo "Addition ($a + $b): " . ($a + $b) . "<br>";
+echo "Subtraction ($a - $b): " . ($a - $b) . "<br>";
+echo "Multiplication ($a * $b): " . ($a * $b) . "<br>";
+echo "Division ($a / $b): " . ($a / $b) . "<br>";
+echo "Modulus ($a % $b): " . ($a % $b) . "<br>";
 
-echo "a > 15 && b < 15 : ";
-var_dump($a > 15 && $b < 15);
-echo "<br>";
+echo "<h3>2. Assignment Operators</h3>";
+$c = $a; 
+echo "Value assigned to \$c: " . $c . "<br>";
+$c += 5; 
+echo "Value after \$c += 5: " . $c . "<br>";
+
+echo "<h3>3. Comparison Operators</h3>";
+echo "Is \$a equal to \$b? " . var_export($a == $b, true) . "<br>";
+echo "Is \$a greater than \$b? " . var_export($a > $b, true) . "<br>";
+echo "Is \$a not equal to \$b? " . var_export($a != $b, true) . "<br>";
+
+echo "<h3>4. Logical Operators</h3>";
+$x = true;
+$y = false;
+echo "Logical AND (\$x && \$y): " . var_export($x && $y, true) . "<br>";
+echo "Logical OR (\$x || \$y): " . var_export($x || $y, true) . "<br>";
+echo "Logical NOT (!\$x): " . var_export(!$x, true) . "<br>";
 ?>
